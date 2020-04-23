@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
+@import url("https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:wght@300;400");
 
 /*
 	Big Picture by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -24,6 +26,33 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+/* Animation */
+#intro_text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 80px;
+	font-weight: light;
+	color: rgb(220, 189, 255);
+	
+	border-right: solid 3px rgb(218, 189, 255);
+	white-space: nowrap;
+	overflow: hidden;
+	animation: animated-text 4s steps(29,end) 1s 1 normal both,
+			   animated-cursor 2000ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+	from{width: 0;}
+	to{width: 790px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+	from {border-right-color:rgba(255,255,255,0.75);} to{border-right-color:transparent;}
+  }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -561,6 +590,7 @@ input, select, textarea {
 		}
 
 	h2 {
+		font-weight: 700;
 		font-size: 2.25em;
 		line-height: 1.25em;
 		letter-spacing: -0.05em;
@@ -1827,19 +1857,19 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		position: fixed;
+		/* position: fixed; */
 		z-index: 10000;
 		left: 0;
 		top: 0;
 		width: 100%;
 		background: rgba(255, 255, 255, 0.95);
-		height: 3em;
+		height: 6em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 	}
 
 		#header h1 {
-			position: absolute;
+			/* position: absolute; */
 			left: 1em;
 			top: 0;
 			height: 3em;
@@ -1852,7 +1882,7 @@ input, select, textarea {
 			}
 
 		#header nav {
-			position: absolute;
+			/* position: relative; */
 			right: 0.5em;
 			top: 0;
 			height: 3em;
@@ -1906,7 +1936,7 @@ input, select, textarea {
 		}
 
 	body {
-		padding-top: 3em;
+		padding-top: 0em;
 	}
 
 		@media screen and (max-width: 736px) {

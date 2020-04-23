@@ -3,6 +3,24 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+$(document).ready(function() {
+	$('#header').scrollToFixed({
+		preFixed: function() { $(this).css('position', 'static'); },
+		postFixed: function() { $(this).css('position', 'fixed'); }
+	});
+});
+
+// var i = 0;
+// var txt = 'hello, my name is ester'; 
+// var speed = 50; 
+
+// function typeWriter() {
+//   if (i < txt.length) {
+//     document.getElementById("intro_text").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
 
 (function($) {
 
@@ -10,7 +28,7 @@
 		$body = $('body'),
 		$header = $('#header'),
 		$all = $body.add($header);
-
+		
 	// Breakpoints.
 		breakpoints({
 			xxlarge: [ '1681px',  '1920px' ],
